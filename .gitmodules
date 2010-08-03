@@ -1,0 +1,9 @@
+[submodule "snippets"]
+	path = snippets
+	url = git://github.com/scrooloose/snipmate-snippets.git
+[submodule "bundles/unimpaired"]
+	path = bundles/unimpaired
+	url = git://github.com/tpope/vim-unimpaired.git
+[submodule "bundles/fugitive"]
+	path = bundles/fugitive
+	url = git://github.com/tpope/vim-fugitive.git

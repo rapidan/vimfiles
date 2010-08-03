@@ -1,0 +1,16 @@
+source ~/.vim/vimrc 
+colorscheme ir_black
+
+call pathogen#runtime_append_all_bundles() 
+
+map <F5> :NERDTreeToggle<cr>
+
+set number
+
+set guifont=Consolas:h15
+
+set tabstop=2
+set smarttab
+set shiftwidth=2
+set autoindent
+set expandtab

@@ -1,0 +1,60 @@
+source ~/.vim/vimrc 
+" colorscheme ir_black
+
+call pathogen#runtime_append_all_bundles() 
+
+map <F5> :NERDTreeToggle<cr>
+
+set number
+
+set guifont=Inconsolata:h18
+colorscheme vibrantink
+
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
+set autoindent
+set smarttab
+set smartindent
+set expandtab
+
+set ignorecase
+set smartcase
+set visualbell
+
+set showmatch
+set ruler
+set nohls
+set incsearch
+
+set history=1000
+
+" Use ack instead of grep
+set grepprg=ack
+
+" Set leader key to comma
+let mapleader = ","
+
+" Edit another file in the same directory as the current file
+" uses expression to extract path from current file's path
+map <Leader>e :e <C-R>=expand("%:p:h") . "/"<CR>
+map <Leader>s :split <C-R>=expand("%:p:h") . "/"<CR>
+map <Leader>v :vnew <C-R>=expand("%:p:h") . "/"<CR>
+
+map <Leader>t :CommandT<cr>
+map <Leader>b :BufExplorer<cr>
+
+" Set up git blame "who"
+vmap <Leader>w :<C-U>!git blame <C-R>=expand("%:p") <CR> \| sed -n <C-R>=line("'<") <CR>,<C-R>=line("'>") <CR>p <CR>
+
+runtime macros/matchit.vim
+
+" Hide the toolbar
+set guioptions-=T
+
+"folding settings
+set foldmethod=indent   "fold based on indent
+set foldnestmax=10      "deepest fold is 10 levels
+set nofoldenable        "dont fold by default
+set foldlevel=1         "this is just what i use
+
